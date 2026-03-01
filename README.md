@@ -1,35 +1,35 @@
 # Proyecto: API de las peliculas mas valoradas de todos los tiempos
----
-**Estudiante:** Sergio Alejandro Atehortua Perez
+
+**Estudiante:** Sergio Alejandro Atehortua Perez 
+
 **URL de la API:** (https://698777b68bacd1d773ed745d.mockapi.io/Titulos)
 
 ## 1. Modelo de datos diseñado
----
+
 Se configuro el recurso `Titulos` con la siguiente estructura de datos:
 
 {
-    "Titulo": "Sueño de fuga",
-    "Fecha": 1994,
-    "Generos": [
-      "Drama",
-      "Intriga"
-    ],
-    "Detalles": {
-      "Clasificacion": "B",
-      "Disponibilidad": "Disp"
-    },
-    "Calificacion": 9.3,
-    "Duracion": "2h 22m",
-    "Stok": "TRUE",
-    "id": "1"
-}
+    "Titulo": "Sueño de fuga", 
+    "Fecha": 1994, 
+    "Generos": [ 
+      "Drama", 
+      "Intriga" 
+    ], 
+    "Detalles": { 
+      "Clasificacion": "B", 
+      "Disponibilidad": "Disp" 
+    }, 
+    "Calificacion": 9.3, 
+    "Duracion": "2h 22m", 
+    "Stok": "TRUE", 
+    "id": "1" 
+} 
 
 ## 2. Bitácora de operaciones CRUD (Respuestas de Postman)
----
 
 ### A. Obtener todos los registros (GET)
-- Status Code:`200 OK`
-- Respuesta de Postman:
+- Status Code:`200 OK` 
+- Respuesta de Postman: 
 
 [
     {
@@ -281,18 +281,18 @@ Se configuro el recurso `Titulos` con la siguiente estructura de datos:
 - Respuesta de Postman:
 
 {
-    "id": "11",
-    "Titulo": "El señor de los anillos: Las dos torres"
+    "id": "11", 
+    "Titulo": "El señor de los anillos: Las dos torres" 
 }
 
 ### F. Validación de recurso inexistente (GET404)
-- Status Code: `404 Not Found`
-- Respuesta de Postman:
+- Status Code: `404 Not Found` 
+- Respuesta de Postman: 
 
 "Not found"
 
 ## 3. Resumen de Endpoint y Codigos HTTP
----
+
 | Acción      | Método | Endpoint   | Código HTTP  |
 |-------------|--------|------------|--------------|
 | Listar todo | GET    | /Titulos   | 200 OK       |
