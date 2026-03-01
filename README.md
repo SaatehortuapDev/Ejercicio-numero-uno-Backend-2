@@ -6,31 +6,37 @@
 
 ## 1. Modelo de datos diseñado
 
-Se configuro el recurso `Titulos` con la siguiente estructura de datos:
+Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 
-{
-    "Titulo": "Sueño de fuga", 
-    "Fecha": 1994, 
-    "Generos": [ 
-      "Drama", 
-      "Intriga" 
-    ], 
-    "Detalles": { 
-      "Clasificacion": "B", 
-      "Disponibilidad": "Disp" 
-    }, 
-    "Calificacion": 9.3, 
-    "Duracion": "2h 22m", 
-    "Stok": "TRUE", 
-    "id": "1" 
-} 
+```json
+[
+
+    {
+        "Titulo": "Sueño de fuga",
+        "Fecha": 1994,
+        "Generos": [
+        "Drama",
+        "Intriga"
+        ],
+        "Detalles": {
+        "Clasificacion": "B",
+        "Disponibilidad": "Disp"
+        },
+        "Calificacion": 9.3,
+        "Duracion": "2h 22m",
+        "Stok": "TRUE",
+        "id": "1"
+    }
+]
+```
 
 ## 2. Bitácora de operaciones CRUD (Respuestas de Postman)
 
 ### A. Obtener todos los registros (GET)
-- Status Code:`200 OK` 
-- Respuesta de Postman: 
+- Status Code:`200 OK`
+- Respuesta de Postman:
 
+```json
 [
     {
         "Titulo": "Sueño de fuga",
@@ -193,103 +199,131 @@ Se configuro el recurso `Titulos` con la siguiente estructura de datos:
         "id": "10"
     }
 ]
+```
 
 ### B. Creación de un nuevo regiistro (POST)
 - Status Code:`201 Created`
 - Cuerpo enviado en Postman:
 
-{
-    "Titulo": "El señor de los anillos: Las dos torres",
-    "Fecha": 2002,
-    "Generos": [
-      "Epica",
-      "Fantasia"
-    ],
-    "Detalles": {
-      "Clasificacion": "B",
-      "Disponibilidad": "Disp"
-    },
-    "Calificacion": 8.8,
-    "Duracion": "2h 59m",
-    "Stok": "TRUE",
-  }
+```json
+[
+
+    {
+        "Titulo": "El señor de los anillos: Las dos torres",
+        "Fecha": 2002,
+        "Generos": [
+            "Epica",
+            "Fantasia"
+        ],
+        "Detalles": {
+            "Clasificacion": "B",
+            "Disponibilidad": "Disp"
+        },
+        "Calificacion": 8.8,
+        "Duracion": "2h 59m",
+        "Stok": "TRUE",
+    }
+]
+```
 
 - Respuesta de Postman:
 
-{
-    "Titulo": "El señor de los anillos: Las dos torres",
-    "Fecha": 2002,
-    "Generos": [
-      "Epica",
-      "Fantasia"
-    ],
-    "Detalles": {
-      "Clasificacion": "B",
-      "Disponibilidad": "Disp"
-    },
-    "Calificacion": 8.8,
-    "Duracion": "2h 59m",
-    "Stok": "TRUE",
-    "id": "11"
-  }
+```json
+[
+    {
+        "Titulo": "El señor de los anillos: Las dos torres",
+        "Fecha": 2002,
+        "Generos": [
+        "Epica",
+        "Fantasia"
+        ],
+        "Detalles": {
+        "Clasificacion": "B",
+        "Disponibilidad": "Disp"
+        },
+        "Calificacion": 8.8,
+        "Duracion": "2h 59m",
+        "Stok": "TRUE",
+        "id": "11"
+    }
+]
+```
 
 ### C. Consulta de registro individual (GET)
 - Endpoint: `Titulos/2`
 - Status Code: `200 OK`
-- Respuesta de Postman
+- Respuesta de Postman:
 
-{
-    "Titulo": "El padrino",
-    "Fecha": 1972,
-    "Generos": [
-        "Epica",
-        "Crimen"
-    ],
-    "Detalles": {
-        "Clasificacion": "C",
-        "Disponibilidad": "Disp"
-    },
-    "Calificacion": 9.2,
-    "Duracion": "2h 55m",
-    "Stok": "TRUE",
-    "id": "2"
-}
+```json
+[
+
+    {
+        "Titulo": "El padrino",
+        "Fecha": 1972,
+        "Generos": [
+            "Epica",
+            "Crimen"
+        ],
+        "Detalles": {
+            "Clasificacion": "C",
+            "Disponibilidad": "Disp"
+        },
+        "Calificacion": 9.2,
+        "Duracion": "2h 55m",
+        "Stok": "TRUE",
+        "id": "2"
+    }
+]
+```
 
 ### D. Actualizacion de un registro (PUT)
 - Status Code: `200 OK`
 - Modificación: Se actualizó el Stock, Disponibilidad y la calificación del registro con el ID 11.
 
-{
-    "Titulo": "El señor de los anillos: Las dos torres",
-    "Fecha": 2002,
-    "Generos": [
-      "Epica",
-      "Fantasia"
-    ],
-    "Detalles": {
-      "Clasificacion": "B",
-      "Disponibilidad": "NoDisp"
-    },
-    "Calificacion": 8.7,
-    "Duracion": "2h 59m",
-    "Stok": "FALSE",
-    "id": "11"
-}
+```json
+[
+    {
+        "Titulo": "El señor de los anillos: Las dos torres",
+        "Fecha": 2002,
+        "Generos": [
+        "Epica",
+        "Fantasia"
+        ],
+        "Detalles": {
+        "Clasificacion": "B",
+        "Disponibilidad": "NoDisp"
+        },
+        "Calificacion": 8.7,
+        "Duracion": "2h 59m",
+        "Stok": "FALSE",
+        "id": "11"
+    }
+]
+```
 
 ### E. Eliminación de un regristro (DELETE)
 - Status Code: `200 OK`
 - Respuesta de Postman:
 
-{
-    "id": "11", 
-    "Titulo": "El señor de los anillos: Las dos torres" 
-}
+```json
+[
+
+    {
+        "id": "11",
+        "Titulo": "El señor de los anillos: Las dos torres"
+    }
+]
+```
 
 ### F. Validación de recurso inexistente (GET404)
-- Status Code: `404 Not Found` 
-- Respuesta de Postman: 
+- Status Code: `404 Not Found`
+- Respuesta de Postman:
 
-"Not found"
+```json
+[
+    "Not found"
+]
+```
 
 ## 3. Resumen de Endpoint y Codigos HTTP
 
