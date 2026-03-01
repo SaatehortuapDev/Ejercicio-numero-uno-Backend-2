@@ -33,7 +33,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 ## 2. Bitácora de operaciones CRUD (Respuestas de Postman)
 
 ### A. Obtener todos los registros (GET)
-- Status Code:`200 OK`
+- Status Code: `200 OK`
 - Respuesta de Postman:
 
 ```json
@@ -202,7 +202,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 ```
 
 ### B. Creación de un nuevo regiistro (POST)
-- Status Code:`201 Created`
+- Status Code: `201 Created`
 - Cuerpo enviado en Postman:
 
 ```json
@@ -320,9 +320,9 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 - Respuesta de Postman:
 
 ```json
-[
+
     "Not found"
-]
+
 ```
 
 ## 3. Resumen de Endpoint y Codigos HTTP
