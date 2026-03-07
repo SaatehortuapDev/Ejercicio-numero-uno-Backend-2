@@ -1,8 +1,8 @@
 # Proyecto: API de las peliculas mas valoradas de todos los tiempos
 
-**Estudiante:** Sergio Alejandro Atehortua Perez 
+**Estudiante:** Sergio Alejandro Atehortua Perez
 
-**URL de la API:** (https://698777b68bacd1d773ed745d.mockapi.io/Titulos)
+**URL de la API:** https://698777b68bacd1d773ed745d.mockapi.io/Titulos
 
 ## 1. Modelo de datos diseñado
 
@@ -24,7 +24,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9.3,
         "Duracion": "2h 22m",
-        "Stok": "TRUE",
+        "Stok": "true",
         "id": "1"
     }
 ]
@@ -51,7 +51,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9.3,
         "Duracion": "2h 22m",
-        "Stok": "TRUE",
+        "Stok": "true",
         "id": "1"
     },
     {
@@ -67,7 +67,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9.2,
         "Duracion": "2h 55m",
-        "Stok": "TRUE",
+        "Stok": "true",
         "id": "2"
     },
     {
@@ -83,7 +83,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9.1,
         "Duracion": "2h 32m",
-        "Stok": "FALSE",
+        "Stok": "false",
         "id": "3"
     },
     {
@@ -99,7 +99,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9,
         "Duracion": "3h 22m",
-        "Stok": "TRUE",
+        "Stok": "true",
         "id": "4"
     },
     {
@@ -115,7 +115,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9,
         "Duracion": "1h 36m",
-        "Stok": "TRUE",
+        "Stok": "true",
         "id": "5"
     },
     {
@@ -131,7 +131,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9,
         "Duracion": "3h 21m",
-        "Stok": "FALSE",
+        "Stok": "false",
         "id": "6"
     },
     {
@@ -147,7 +147,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 9,
         "Duracion": "3h 15m",
-        "Stok": "TRUE",
+        "Stok": "true",
         "id": "7"
     },
     {
@@ -163,7 +163,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 8.9,
         "Duracion": "2h 58m",
-        "Stok": "FALSE",
+        "Stok": "false",
         "id": "8"
     },
     {
@@ -179,7 +179,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 8.8,
         "Duracion": "2h 34m",
-        "Stok": "FALSE",
+        "Stok": "false",
         "id": "9"
     },
     {
@@ -195,7 +195,7 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
         },
         "Calificacion": 8.8,
         "Duracion": "2h 41m",
-        "Stok": "TRUE",
+        "Stok": "true",
         "id": "10"
     }
 ]
@@ -206,47 +206,44 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 - Cuerpo enviado en Postman:
 
 ```json
-[
+{
+    "Titulo": "El señor de los anillos: Las dos torres",
+    "Fecha": 2002,
+    "Generos": [
+        "Epica",
+        "Fantasia"
+    ],
+    "Detalles": {
+        "Clasificacion": "B",
+        "Disponibilidad": "Disp"
+    },
+    "Calificacion": 8.8,
+    "Duracion": "2h 59m",
+    "Stok": "TRUE",
+}
 
-    {
-        "Titulo": "El señor de los anillos: Las dos torres",
-        "Fecha": 2002,
-        "Generos": [
-            "Epica",
-            "Fantasia"
-        ],
-        "Detalles": {
-            "Clasificacion": "B",
-            "Disponibilidad": "Disp"
-        },
-        "Calificacion": 8.8,
-        "Duracion": "2h 59m",
-        "Stok": "TRUE",
-    }
-]
 ```
 
 - Respuesta de Postman:
 
 ```json
-[
-    {
-        "Titulo": "El señor de los anillos: Las dos torres",
-        "Fecha": 2002,
-        "Generos": [
-        "Epica",
-        "Fantasia"
-        ],
-        "Detalles": {
-        "Clasificacion": "B",
-        "Disponibilidad": "Disp"
-        },
-        "Calificacion": 8.8,
-        "Duracion": "2h 59m",
-        "Stok": "TRUE",
-        "id": "11"
-    }
-]
+{
+"Titulo": "El señor de los anillos: Las dos torres",
+"Fecha": 2002,
+    "Generos": [
+    "Epica",
+    "Fantasia"
+    ],
+    "Detalles": {
+    "Clasificacion": "B",
+    "Disponibilidad": "Disp"
+    },
+    "Calificacion": 8.8,
+    "Duracion": "2h 59m",
+    "Stok": "TRUE",
+    "id": "11"
+}
+
 ```
 
 ### C. Consulta de registro individual (GET)
@@ -255,25 +252,23 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 - Respuesta de Postman:
 
 ```json
-[
+{
+    "Titulo": "El padrino",
+    "Fecha": 1972,
+    "Generos": [
+        "Epica",
+        "Crimen"
+    ],
+    "Detalles": {
+        "Clasificacion": "C",
+        "Disponibilidad": "Disp"
+    },
+    "Calificacion": 9.2,
+    "Duracion": "2h 55m",
+    "Stok": "TRUE",
+    "id": "2"
+}
 
-    {
-        "Titulo": "El padrino",
-        "Fecha": 1972,
-        "Generos": [
-            "Epica",
-            "Crimen"
-        ],
-        "Detalles": {
-            "Clasificacion": "C",
-            "Disponibilidad": "Disp"
-        },
-        "Calificacion": 9.2,
-        "Duracion": "2h 55m",
-        "Stok": "TRUE",
-        "id": "2"
-    }
-]
 ```
 
 ### D. Actualizacion de un registro (PUT)
@@ -281,24 +276,24 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 - Modificación: Se actualizó el Stock, Disponibilidad y la calificación del registro con el ID 11.
 
 ```json
-[
-    {
-        "Titulo": "El señor de los anillos: Las dos torres",
-        "Fecha": 2002,
-        "Generos": [
-        "Epica",
-        "Fantasia"
-        ],
-        "Detalles": {
-        "Clasificacion": "B",
-        "Disponibilidad": "NoDisp"
-        },
-        "Calificacion": 8.7,
-        "Duracion": "2h 59m",
-        "Stok": "FALSE",
-        "id": "11"
-    }
-]
+
+{
+    "Titulo": "El señor de los anillos: Las dos torres",
+    "Fecha": 2002,
+    "Generos": [
+    "Epica",
+    "Fantasia"
+    ],
+    "Detalles": {
+    "Clasificacion": "B",
+    "Disponibilidad": "NoDisp"
+    },
+    "Calificacion": 8.7,
+    "Duracion": "2h 59m",
+    "Stok": "FALSE",
+    "id": "11"
+}
+
 ```
 
 ### E. Eliminación de un regristro (DELETE)
@@ -306,13 +301,12 @@ Se configuró el recurso `Titulos` con la siguiente estructura de datos:
 - Respuesta de Postman:
 
 ```json
-[
 
-    {
-        "id": "11",
-        "Titulo": "El señor de los anillos: Las dos torres"
-    }
-]
+{
+    "id": "11",
+    "Titulo": "El señor de los anillos: Las dos torres"
+}
+
 ```
 
 ### F. Validación de recurso inexistente (GET404)
